@@ -1,11 +1,21 @@
 <?php 
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 
 function quizbook_frontend_styles(){
 
 	// Registrar los estilos
-	wp_enqueue_style( 'quizbook_css', plugins_url( '../assets/css/quizbook.css',__FILE__), array(), '1.25');
+	wp_enqueue_style('quizbook_css', plugins_url( '../assets/css/quizbook.css',__FILE__), array(), '1.25');
 	wp_enqueue_script('quizbookjs', plugins_url( '../assets/js/quizbook.js',__FILE__), array('jquery'), 1.25, true);
+
+	wp_localize_script('quizbookjs','admin_url', array(
+			'ajax_url'  =>  admin_url('admin-ajax.php')
+
+	));
+
 
 /*	wp_register_style('style', get_template_directory_uri().'/style.css', array('bootstrap'), '1.0');
 

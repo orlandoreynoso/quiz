@@ -56,6 +56,10 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/funciones.php';
 */
 require_once plugin_dir_path( __FILE__ ) . 'includes/scripts.php';
 
+/*
+* result about test
+*/
+require_once plugin_dir_path( __FILE__ ) . 'includes/resultados.php';
 
 
 ?>

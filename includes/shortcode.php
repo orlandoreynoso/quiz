@@ -67,7 +67,7 @@ function quizbook_shortcode($atts){
 								//echo $numero['2'];
 
 									?>
-										<div id="<?php echo get_the_ID() .":". $numero['2']; ?>">
+										<div id="<?php echo get_the_ID() .":". $numero['2']; ?>" class="respuesta">
 											<?php echo $opcion['0']; ?>
 										</div>
 
@@ -95,6 +95,7 @@ function quizbook_shortcode($atts){
 				<?php endwhile; wp_reset_postdata();  ?>
 			</ul>
 		</div>
+		<input type="submit" value="Enviar" id="quizbook_btn_submit">
 		
 	</form>
 
